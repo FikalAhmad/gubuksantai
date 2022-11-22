@@ -1,0 +1,625 @@
+@font-face {
+  font-family: jakartaBold;
+  src: url(./webfont/+JakartaSansDisplay-Bold.woff);
+}
+@font-face {
+  font-family: jakartaItalic;
+  src: url(./webfont/+JakartaSansDisplay-Italic.woff);
+}
+@font-face {
+  font-family: jakartaLight;
+  src: url(./webfont/+JakartaSansDisplay-Light.woff);
+}
+@font-face {
+  font-family: jakartaMedium;
+  src: url(./webfont/+JakartaSansDisplay-Medium.woff);
+}
+@font-face {
+  font-family: jakartaRegular;
+  src: url(./webfont/+JakartaSansDisplay-Regular.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* border: 1px solid red; */
+}
+
+body {
+  font-family: jakartaRegular;
+  color: white;
+  font-family: jakartaRegular, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+/*css3 design scrollbar*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: white;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 27px 0px;
+}
+.nav-list {
+  display: flex;
+  box-shadow: 9px rgba(235, 8, 8, 0.5);
+}
+.nav-item {
+  list-style-type: none;
+  margin-left: 40px;
+}
+.nav-link {
+  opacity: 1;
+  text-decoration: none;
+  transition: 0.25s;
+}
+.nav-link:hover {
+  opacity: 0.5;
+  transform: translateY(-10%);
+}
+.nav-text {
+  color: #202225;
+}
+.hamham {
+  display: none;
+}
+.logo {
+  color: #202225;
+  font-size: 23px;
+}
+
+#Home {
+  background: url(/img/wave1.png); /*nanti gambarnya pake container aja covernya */
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  padding: 100px 50px;
+  height: 90vh;
+  color: #202225;
+  display: flex;
+}
+#Home h1 {
+  font-size: 60px;
+}
+#Home img {
+  width: 500px;
+  height: 350px;
+}
+.section-home {
+  padding-top: 30px;
+  text-align: center;
+}
+.paragraf-home {
+  text-align: justify;
+  padding: 10px 50px;
+}
+.tombol-gabung {
+  position: relative;
+  top: 5%;
+  margin-top: 100px;
+  padding: 10px;
+  border: 1px solid #202225;
+  border-radius: 10px;
+  background-color: white;
+  color: #202225;
+  text-decoration: none;
+  transition: 0.25s;
+}
+.tombol-gabung:hover {
+  font-family: jakartaRegular;
+  background-color: #202225;
+  color: white;
+  border: 1px solid white;
+}
+
+/* ABOUT CSS */
+#About {
+  background-color: #202225;
+}
+.main-about {
+  padding: 100px 50px;
+  text-align: center;
+}
+#About h1,
+#Blog h1,
+#Gallery h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: jakartaBold;
+  padding: 10px 0;
+}
+.image-about {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.image-about img {
+  width: 450px;
+  height: 300px;
+}
+.paragraf-about {
+  text-align: justify;
+  padding: 20px 48px;
+  font-size: 20px;
+}
+
+/* KEGIATAN CSS */
+.kegiatan-wrap {
+  padding: 10px 0 0;
+}
+.kegiatan {
+  width: 50vw;
+  margin: auto;
+}
+.kegiatan-item {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.bg-number-item {
+  padding-right: 10px;
+  color: #202225;
+  font-family: jakartaBold;
+  font-size: 20px;
+}
+.number-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 50%;
+}
+.p-number {
+  text-align: justify;
+  font-size: 20px;
+  margin: auto;
+}
+
+/* TEAM CSS */
+.team-wrap {
+  padding: 100px 0 0;
+}
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-column-gap: 1em;
+}
+.in-team {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: white;
+}
+.in-team img {
+  border-radius: 50%;
+}
+.in-team-p {
+  padding-top: 10px;
+  margin: auto;
+}
+
+/* BLOG-CSS */
+#Blog {
+  padding: 100px 50px;
+  background-color: #202225;
+}
+.main-container {
+  padding: 30px;
+}
+.heading {
+  text-align: center;
+}
+.heading__title {
+  font-weight: 600;
+}
+.heading__credits {
+  margin: 10px 0px;
+  color: #888888;
+  font-size: 25px;
+  transition: all 0.5s;
+}
+.heading__link {
+  text-decoration: none;
+}
+.heading__credits .heading__link {
+  color: inherit;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  margin: 20px;
+  padding: 20px;
+  width: 500px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+.card__link {
+  position: relative;
+  text-decoration: none;
+  color: #202225;
+}
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: #202020;
+  transition: all 0.5s;
+}
+.card__link:hover::after {
+  width: 100%;
+}
+.card__title {
+  grid-row: 3/4;
+  font-weight: 400;
+  color: black;
+}
+.card__apply {
+  grid-row: 4/5;
+  align-self: center;
+}
+.card-1,
+.card-2,
+.card-3,
+.card-4,
+.card-5 {
+  background: white;
+}
+
+/* GALLERY-CSS */
+#Gallery {
+  padding: 100px 50px;
+  background-color: #202225;
+}
+.gambar {
+  padding: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+}
+.gambar .item img {
+  width: 100%;
+  height: auto;
+}
+.item {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #202225;
+}
+.item:hover .overlay {
+  opacity: 0.8;
+}
+.text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.footer {
+  background-color: #202225;
+}
+.copyright {
+  text-align: center;
+  padding: 50px;
+}
+
+/* responsivenya */
+@media screen and (max-width: 1200px) {
+  #Home h1 {
+    font-size: 50px;
+  }
+  #Home img {
+    width: 400px;
+    height: 300px;
+  }
+  .section-home {
+    text-align: center;
+  }
+  .paragraf-home {
+    text-align: justify;
+    padding: 0 25px;
+  }
+  .cards {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hamham {
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    background-color: white;
+    position: relative;
+    right: 20px;
+    z-index: 8;
+  }
+  .hamham input {
+    position: absolute;
+    left: -5px;
+    top: -3px;
+    width: 40px;
+    height: 30px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .hamham span {
+    display: block;
+    width: 29px;
+    height: 3px;
+    background-color: #202225;
+    border-radius: 3px;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    z-index: 2;
+    width: 60%;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+  nav ul.slide {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .logo {
+    margin-right: auto;
+    margin-left: 30px;
+    z-index: 3;
+  }
+
+  #Home {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    /* align-content: center; */
+    /* justify-content: center; */
+  }
+  #Home h1 {
+    font-size: 40px;
+  }
+  .paragraf-home {
+    padding: 10px 5px;
+    text-align: justify;
+    padding: 10px 25px;
+  }
+  .tombol-gabung {
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #202225;
+    border-radius: 10px;
+    background-color: white;
+    color: #202225;
+    text-decoration: none;
+  }
+  #Home .image-home {
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 300px;
+  }
+  #Home img {
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+  }
+  .section-home {
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .main-about {
+    padding: 100px 35px;
+    text-align: center;
+  }
+  .paragraf-about {
+    text-align: justify;
+    padding: 10px 5px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .kegiatan {
+    width: 75vw;
+    margin: auto;
+  }
+  .number-item {
+    padding: 15px;
+  }
+  .p-number {
+    font-size: 15px;
+  }
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+  }
+  .in-team img {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hamham {
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    background-color: white;
+    position: relative;
+    right: 20px;
+    z-index: 8;
+  }
+  .hamham input {
+    position: absolute;
+    left: -5px;
+    top: -3px;
+    width: 40px;
+    height: 30px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .hamham span {
+    display: block;
+    width: 29px;
+    height: 3px;
+    background-color: #202225;
+    border-radius: 3px;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    z-index: 2;
+    width: 60%;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .logo {
+    margin-right: auto;
+    margin-left: 30px;
+    font-size: 20px;
+    z-index: 3;
+  }
+  .col {
+    text-align: center;
+    flex-basis: 80%;
+  }
+
+  #Home {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    background-size: contain;
+    /* align-content: center; */
+    /* justify-content: center; */
+  }
+  #Home h1 {
+    font-size: 40px;
+  }
+  .paragraf-home {
+    font-size: 15px;
+    padding: 10px 5px;
+    text-align: justify;
+    padding: 10px 25px;
+  }
+  .tombol-gabung {
+    font-size: 15px;
+    padding: 8px;
+    border: 1px solid #202225;
+    border-radius: 10px;
+    background-color: white;
+    color: #202225;
+    text-decoration: none;
+  }
+  #Home .image-home {
+    display: block;
+    width: 300px;
+    height: 300px;
+    padding-top: 30px;
+    margin: auto;
+  }
+  #Home img {
+    width: 100%;
+    height: 100%;
+  }
+  .section-home {
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .main-about {
+    padding: 100px 35px;
+    text-align: center;
+  }
+  .paragraf-about {
+    text-align: justify;
+    padding: 10px 5px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .image-about img {
+    width: 300px;
+    height: 200px;
+    margin: auto;
+  }
+  .kegiatan {
+    width: 75vw;
+    margin: auto;
+  }
+  .number-item {
+    padding: 15px;
+  }
+  .p-number {
+    font-size: 15px;
+  }
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+  }
+  .in-team img {
+    width: 250px;
+  }
+}
